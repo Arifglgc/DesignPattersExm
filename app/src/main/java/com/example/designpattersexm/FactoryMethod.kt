@@ -17,6 +17,13 @@ class FactoryMethod {
         }
     }
 
+    class DelayTask: Task{
+        override fun execute() {
+            println("Execute ")
+        }
+
+    }
+
     class UploadTask : Task {
         override fun execute() {
             println("Executing Upload Task...")
@@ -28,7 +35,6 @@ class FactoryMethod {
     // Creator abstract Class
     abstract class TaskCreator {
         abstract fun createTask(): Task
-
         fun taskManager(){
             val testTask= createTask()
             testTask.execute()

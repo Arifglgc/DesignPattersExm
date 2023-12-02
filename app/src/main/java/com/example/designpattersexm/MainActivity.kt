@@ -2,6 +2,7 @@ package com.example.designpattersexm
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import java.lang.Exception
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +24,11 @@ class MainActivity : AppCompatActivity() {
 
         initialize()
         taskCreator.taskManager()
+        //----------------------
+        val firstInitial= MySingleton.getInstance()
+        val secondInitial= MySingleton.getInstance()
+        val isSame = firstInitial == secondInitial
+        Log.d("Singleton Test", isSame.toString())
     }
 
     fun readApplicationConfigFile(): Config {
