@@ -1,4 +1,4 @@
-package com.example.designpattersexm
+package com.example.designpattersexm.designPattern.factoryPattern
 
 import android.util.Log
 
@@ -17,7 +17,7 @@ class FactoryMethod {
         }
     }
 
-    class DelayTask: Task{
+    class DelayTask: Task {
         override fun execute() {
             println("Execute ")
         }

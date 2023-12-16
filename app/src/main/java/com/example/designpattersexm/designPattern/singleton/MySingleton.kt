@@ -1,4 +1,4 @@
-package com.example.designpattersexm
+package com.example.designpattersexm.designPattern.singleton
 
 class MySingleton private constructor() {
 
